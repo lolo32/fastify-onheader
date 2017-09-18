@@ -1,6 +1,6 @@
 {
   "name": "fastify-onheader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Execute a listener when a response is about to write headers for Fastify",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
   },
   "homepage": "https://github.com/lolo32/fastify-onheader.git#readme",
   "author": "Lolo_32",
-  "license": "ISC",
+  "license": "MIT",
   "keywords": [
     "Fastify",
     "on-header",
