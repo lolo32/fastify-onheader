@@ -1,5 +1,8 @@
 # fastify-onheader
 
+**This is deprecated and not be updated anymore.  Since Fastify v0.30, you can do it natively with the `onSend` hook,
+ that is better, and fully asynchronous. It's kept just for version prior v0.30**
+
 [![Build Status](https://travis-ci.org/lolo32/fastify-onheader.svg?branch=master)](https://travis-ci.org/lolo32/fastify-onheader)
 [![Coverage Status](https://coveralls.io/repos/github/lolo32/fastify-onheader/badge.svg)](https://coveralls.io/github/lolo32/fastify-onheader)
 [![Known Vulnerabilities](https://snyk.io/test/github/lolo32/fastify-onheader/badge.svg)](https://snyk.io/test/github/lolo32/fastify-onheader)
