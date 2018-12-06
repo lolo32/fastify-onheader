@@ -26,11 +26,13 @@ before the request is send to modify the headers.
 
 ```javascript
 // Register the plugin
-fastify.register(require("fastify-onheader"), (err) => {
+fastify.register(require("fastify-onheader"));
+fastify.after((err) => {
     if (err) {
       throw err;
     }
 });
+
 
 // Define a new route in hapijs notation
 fastify.route({

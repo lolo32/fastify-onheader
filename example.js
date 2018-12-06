@@ -2,7 +2,8 @@
 
 const fastify = require("fastify")();
 
-fastify.register(require("./index"), (err) => {
+fastify.register(require("./index"));
+fastify.after((err) => {
   if (err) {
     throw err;
   }
