@@ -15,7 +15,8 @@ test("reply.onheader exists", (tap) => {
   const data = {hello: "world"};
 
   const fastify = fastifyModule();
-  fastify.register(fastifyOnHeader, (err) => {
+  fastify.register(fastifyOnHeader);
+  fastify.ready((err) => {
     tap.error(err);
   });
 
@@ -46,7 +47,8 @@ test("reply.onheader can add headers", (tap) => {
   const data = {hello: "world"};
 
   const fastify = fastifyModule();
-  fastify.register(fastifyOnHeader, (err) => {
+  fastify.register(fastifyOnHeader);
+  fastify.ready((err) => {
     tap.error(err);
   });
 
@@ -69,7 +71,7 @@ test("reply.onheader can add headers", (tap) => {
       tap.strictEqual(response.statusCode, 200);
       tap.strictEqual(response.headers["content-length"], `${body.length}`);
       tap.strictEqual(response.headers["x-onheader-test"], "Passed");
-      tap.deepEqual(JSON.parse(body), data);
+      tap.same(JSON.parse(body), data);
       fastify.close();
     });
   });

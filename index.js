@@ -24,4 +24,4 @@ module.exports = fastifyPlugin((instance, opts, next) => {
       });
 
   next();
-}, "0.x");
+}, "1.x");
